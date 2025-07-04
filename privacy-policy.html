@@ -1,22 +1,59 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DailyQuotes Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DailyQuotes Privacy Policy</title>
+  <style>
+    body { 
+      font-family: -apple-system, system-ui, sans-serif; 
+      margin: 0; padding: 2rem; 
+      background: #f9f9f9; color: #333; 
+      display: flex; flex-direction: column; align-items: center;
+      text-align: left;
+    }
+    header, footer { text-align: center; }
+    h1 { font-size: 1.8rem; margin-bottom: .5rem; }
+    #funQuote {
+      font-size: 1.1rem; font-style: italic; color: #555;
+      margin: 1rem auto 2rem; max-width: 600px;
+    }
+    nav { margin-bottom: 2rem; }
+    nav a {
+      margin: 0 .5rem;
+      text-decoration: none;
+      color: #007AFF;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 640px; }
+    section h2 { margin-top: 1.5rem; font-size: 1.4rem; }
+    section p, section li { line-height: 1.6; margin-bottom: .75rem; }
+    ul { padding-left: 1.2rem; }
+    footer { margin-top: 3rem; font-size: .9rem; color: #888; }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy for DailyQuotes</h1>
+  <header>
+    <h1>🔒 Privacy Policy</h1>
+    <div id="funQuote">Loading your daily inspiration…</div>
+    <nav>
+      <a href="index.html">Home 🏠</a>
+      <a href="support.html">Support 🛠️</a>
+    </nav>
+  </header>
 
-    <p>Last updated: July 2, 2025</p>
+  <section>
+    <p><em>Last updated: July 3, 2025</em></p>
 
     <h2>1. Introduction</h2>
     <p>DailyQuotes (“we”, “our”, or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and store data when you use our mobile application DailyQuotes.</p>
 
     <h2>2. Information We Collect</h2>
     <ul>
-        <li><strong>Local Data:</strong> We store your favorite quotes locally on your device using AsyncStorage. This data never leaves your device unless you explicitly share a quote.</li>
-        <li><strong>Remote API:</strong> We fetch quotes from third-party APIs (e.g., quotable.io). We do not log or store any personally identifiable information from these calls.</li>
-        <li><strong>No Analytics:</strong> We do not collect usage analytics, crash reports, or any tracking identifiers.</li>
+      <li><strong>Local Data:</strong> We store your favorite quotes locally on your device using AsyncStorage. This data never leaves your device unless you explicitly share a quote.</li>
+      <li><strong>Remote API:</strong> We fetch quotes from third-party APIs (e.g., quotable.io). We do not log or store any personally identifiable information from these calls.</li>
+      <li><strong>No Analytics:</strong> We do not collect usage analytics, crash reports, or any tracking identifiers.</li>
     </ul>
 
     <h2>3. Use of Data</h2>
@@ -35,6 +72,26 @@
     <p>We may update this Privacy Policy occasionally. The “Last updated” date will reflect any changes.</p>
 
     <h2>8. Contact Us</h2>
-    <p>If you have questions or concerns, please contact us at <a href="mailto:mark.michalak@hotmail.com">privacy@yourdomain.com</a>.</p>
+    <p>If you have questions or concerns, please contact us at 
+      <a href="mailto:mark.michalak@hotmail.com">mark.michalak@hotmail.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Mark Michalak</p>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "“Life is what happens when you're busy making other plans.” — John Lennon",
+      "“The only way to do great work is to love what you do.” — Steve Jobs",
+      "“Believe you can and you're halfway there.” — Theodore Roosevelt",
+      "“Don't watch the clock; do what it does. Keep going.” — Sam Levenson",
+      "“Everything you've ever wanted is on the other side of fear.” — George Addair"
+    ];
+    document.getElementById('funQuote').textContent =
+      quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
 </body>
 </html>

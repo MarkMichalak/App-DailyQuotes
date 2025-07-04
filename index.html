@@ -10,24 +10,49 @@
       margin: 0; padding: 2rem; 
       background: #f9f9f9; color: #333; 
       display: flex; flex-direction: column; align-items: center;
+      text-align: center;
     }
-    h1 { margin-bottom: 1rem; }
+    h1 { margin-bottom: .5rem; }
+    #funQuote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #555;
+      margin: 1rem auto 2rem;
+      max-width: 600px;
+    }
     nav { display: flex; gap: 1.5rem; margin-top: 2rem; }
     a { 
       padding: 0.75rem 1.5rem; 
       background: #007AFF; color: white; 
       text-decoration: none; border-radius: 4px; 
       font-size: 1rem;
+      transition: background .2s;
     }
     a:hover { background: #005BB5; }
+    footer { margin-top: 3rem; font-size: .9rem; color: #888; }
   </style>
 </head>
 <body>
-  <h1>DailyQuotes</h1>
-  <p>Welcome! Choose an option below:</p>
+  <h1>📖 DailyQuotes</h1>
+  <div id="funQuote">Loading your daily inspiration…</div>
   <nav>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
+    <a href="privacy-policy.html">Privacy Policy 🔒</a>
+    <a href="support.html">Support 🛠️</a>
   </nav>
+  <footer>Made with ❤️ by Mark Michalak</footer>
+
+  <script>
+    // small rotating set of fun quotes
+    const quotes = [
+      "“Life is what happens when you're busy making other plans.” — John Lennon",
+      "“The only way to do great work is to love what you do.” — Steve Jobs",
+      "“Believe you can and you're halfway there.” — Theodore Roosevelt",
+      "“Don't watch the clock; do what it does. Keep going.” — Sam Levenson",
+      "“Everything you've ever wanted is on the other side of fear.” — George Addair"
+    ];
+    const el = document.getElementById('funQuote');
+    const pick = quotes[Math.floor(Math.random() * quotes.length)];
+    el.textContent = pick;
+  </script>
 </body>
 </html>
